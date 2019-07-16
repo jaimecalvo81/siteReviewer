@@ -1,0 +1,18 @@
+casperjs test test/main.js --url="https://www.viasat.se" --shot=1 --crawl=1 --regexp="#|ftp|javascript|.pdf"
+or:
+casperjs test test/main.js --urllist="urls.js" --crawl=0
+ 	
+Arg				Options										If not suppled
+url				starting url. 								https://www.viasat.se
+				!OBS ! 
+				this will be overwritten 
+				if you use urllist			
+shot			1 or 0, 
+				if it should take screenshot or not.		1
+crawl			1 or 0, 
+				if it should crawl for links on each page.	1
+urllist			a file in test folder that populate 		none
+				pendingUrls, see urls.js	
+regexp			Regexp for which urls NOT to test, 			#|ftp|javascript|.pdf
+				will effect urllist also	
+
